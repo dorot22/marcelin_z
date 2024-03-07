@@ -1,0 +1,4 @@
+# Autoriser toutes les origines (à utiliser avec précaution en production)
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type"

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarcelinZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <h1>MarcelinZ</h1>
+        </a>
+        <div class="onglets">
+            <a href="#astrophotosSection">Mes astrophotos</a>
+            <a href="#socialNetworksSection">Mes dernières publications</a>
+            <a href="">Contact</a>
+        </div>
+    </nav>
+    <div id="mainContent">
+        <div id="astrophotosSection">
+            <h1> Mes astrophotos :</h1>
+            <div class="image-container">
+                <div class="gallery">
+                    <img class='album' oncontextmenu='return false;' src="images/orion_dernier 2_.JPG"
+                        alt="Votre Image">
+                    <p class="photoDescription">Orion : Photo prise le 4 janvier - caracteristiques de la photo </p>
+                    <div class="desc">
+                        <p style="display: inline;">Orion</p>
+
+                    </div>
+
+                </div>
+                <div class="gallery">
+                    <img class='album' oncontextmenu='return false;' src="images/galaxie du triangle.png"
+                        alt="Votre Image">
+                    <p class="photoDescription">Galaxie du triangle : Photo prise le 4 septembre - caracteristiques de
+                        la photo </p>
+                    <div class="desc">
+                        <p style="display: inline;">Galaxie du triangle</p>
+                        <a href="https://lama.co/MarcelinZ/LA-GALAXIE-DU-TRIANGLE-dD6fUt5" target="_blank"><img
+                                src="images/icons8-ajouter-au-panier-64.png"
+                                style="height: 20px; width: auto; display: inline;" alt="logo acheter">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="imagefocus">
+            <i class="fa fa-chevron-circle-left" style="font-size:48px;" id="left-arrow"></i>
+            <div id="pictureAndDescriptionFocus"></div>
+            <i class="fa fa-chevron-circle-right" style="font-size:48px;" id="right-arrow"></i>
+        </div>
+        <div id="socialNetworksSection">
+            <h1> Mes dernières publications :</h1>
+            <div id="lastPublications">
+                <div id="instagram-photos" class="instagram-photos"></div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/i7oi1eIXaq0?si=WvRkZV6ILaASK2la"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.tiktok.com/@marcelinz__/video/7341709939229969696"
+                    frameborder="0">
+                    <blockquote class="tiktok-embed"
+                        cite="https://www.tiktok.com/@marcelinz__/video/7341709939229969696"
+                        data-video-id="7341709939229969696" style="max-width: 560;min-width: 325px; max-height: 315;">
+                        <section> <a target="_blank" title="@marcelinz__"
+                                href="https://www.tiktok.com/@marcelinz__?refer=embed">@marcelinz__</a>
+                            <p>👽🛸</p> <a target="_blank" title="♬ son original - MarcelinZ"
+                                href="https://www.tiktok.com/music/son-original-7341709982248078112?refer=embed">♬ son
+                                original - MarcelinZ</a>
+                        </section>
+                    </blockquote>
+                </iframe>
+
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <!-- <h1> Contact</h1> -->
+        <p id="contact">&copy; 2024 Marcelin Z - Dorothee Alayrac</p>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
+</html>
