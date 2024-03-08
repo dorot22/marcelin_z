@@ -476,17 +476,17 @@ img {
 
 div.gallery {
     margin: 5px;
-    border: 1px solid #ccc;
     float: left;
     width: 24%;
-    filter: drop-shadow(5px 5px 10px black);
-    -webkit-filter: drop-shadow(5px 5px 10px black);
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(5px 5px 10px rgb(0, 0, 0, 0.5)black);
 }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    /* border: 1px solid #777; */
     filter: drop-shadow(5px 5px 10px black);
     -webkit-filter: drop-shadow(5px 5px 10px black);
+    cursor:zoom-in;
 }
 
 div.desc {
@@ -497,7 +497,8 @@ div.desc {
 #left-arrow,
 #right-arrow {
     color: #6f6f6f;
-    margin: auto;
+    margin: auto 1%;
+
 }
 
 #mainContent {
@@ -505,14 +506,15 @@ div.desc {
     margin-left: 25px;
 }
 
-#astrophotosSection h1, #socialNetworksSection h1 {
+#astrophotosSection h1,
+#socialNetworksSection h1 {
     color: #717171;
     font-family: 'Anta', sans-serif;
     font-size: 30px;
 }
 
-#lastPublications blockquote{
-    display: ruby;
+#lastPublications {
+    display: flex;
 
 }
 
@@ -525,4 +527,8 @@ div.desc {
     padding: 2%;
     color: aliceblue;
     font-family: 'Anta', sans-serif;
+}
+
+#lastPublicationsArea{
+    display: inline-flex;
 }
