@@ -22,15 +22,17 @@ imageContainers.forEach((element) => {
         document.querySelector('footer').style.filter = 'blur(5px)';
         document.querySelector('#astrophotosSection').style.filter = 'blur(5px)';
         document.querySelector('#socialNetworksSection').style.filter = 'blur(5px)';
+        imageFocus.style.filter = 'none';
         imageFocus.style.width = '50%';
-        imageFocus.style.margin = 'auto';
-        imageFocus.style.margin = '5% auto auto auto';
+        imageFocus.style.margin = '2% auto auto auto';
+        imageFocus.style.height = 'auto';
         imageFocus.style.padding = '1%';
         imageFocus.style.backgroundColor = '#717171';
         photoDescriptionFocus.style.display = 'block';
         pictureAndDescriptionFocus.appendChild(imageFocus);
         pictureAndDescriptionFocus.appendChild(photoDescriptionFocus);
         divImageFocus.style.display = "inline-flex";
+        imageFocus.style.clipPath = 'none';
         body.style.backgroundColor = ' rgba(0, 0, 0, 0.8)';
 
     });
@@ -95,10 +97,12 @@ function scrollPhoto(direction) {
     newPhotoDescriptionFocus.style.display = 'block';
     var newimageFocus = imageRef.cloneNode();
     newimageFocus.style.width = '50%';
-    newimageFocus.style.margin = 'auto';
-    newimageFocus.style.margin = '5% auto auto auto';
+    newimageFocus.style.height = 'auto';
+    newimageFocus.style.margin = '2% auto auto auto';
     newimageFocus.style.padding = '1%';
     newimageFocus.style.backgroundColor = '#717171';
+    newimageFocus.style.display = 'block';
+    newimageFocus.style.clipPath = 'none';
     pictureAndDescriptionFocus.replaceChild(newimageFocus, imageFocus);
     pictureAndDescriptionFocus.replaceChild(newPhotoDescriptionFocus, photoDescriptionFocus);
     imageFocus = newimageFocus
