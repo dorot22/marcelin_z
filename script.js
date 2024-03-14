@@ -6,17 +6,21 @@ const body = document.querySelector('body');
 var imageRef = "";
 var imageFocus = "";
 var photoDescriptionFocus = "";
-const rightArrow = document.querySelector('#right-arrow');
-const leftArrow = document.querySelector('#left-arrow');
+const rightArrowImageFocus = document.querySelector('#right-arrow-imageFocus');
+const leftArrowImageFocus = document.querySelector('#left-arrow-imageFocus');
 var isFocus = false;
-
+const navbarH1 = document.querySelector('nav a h1');
+const lastPublications = document.querySelectorAll('.socialNetworkPublication');
+const leftArrowLastPublicationsArea = document.querySelector('#left-arrow-lastPublicationsArea');
+const rightArrowLastPublicationsArea = document.querySelector('#right-arrow-lastPublicationsArea');
+var publicationFocus = lastPublications[0];
+publicationFocus.style.display='block';
 
 imageContainers.forEach((element) => {
     element.addEventListener('click', (event) => {
         isFocus = true
         imageRef = event.target
         imageFocus = imageRef.cloneNode();
-        console.log(imageRef.nextElementSibling)
         photoDescriptionFocus = imageRef.nextElementSibling.cloneNode(true);
         document.querySelector('nav').style.filter = 'blur(5px)';
         document.querySelector('footer').style.filter = 'blur(5px)';
@@ -40,7 +44,7 @@ imageContainers.forEach((element) => {
 
 document.addEventListener('click', (event) => {
     if (imageFocus != '') {
-        if (!Array.from(imageContainers).some(container => container.contains(event.target)) && !rightArrow.contains(event.target) && !leftArrow.contains(event.target)) {
+        if (!Array.from(imageContainers).some(container => container.contains(event.target)) && !rightArrowImageFocus.contains(event.target) && !leftArrowImageFocus.contains(event.target)) {
             isFocus = false;
             body.style.backgroundColor = 'transparent';
             divImageFocus.style.display = "none";
@@ -56,17 +60,17 @@ document.addEventListener('click', (event) => {
 
 });
 
-rightArrow.addEventListener('click', (event) => {
+rightArrowImageFocus.addEventListener('click', (event) => {
     scrollPhoto('right')
 });
 
-leftArrow.addEventListener('click', (event) => {
+leftArrowImageFocus.addEventListener('click', (event) => {
     scrollPhoto('left')
 });
 
 
 document.addEventListener("keydown", function (event) {
-    if(focus){
+    if (focus) {
         if (event.key === "ArrowRight") {
             scrollPhoto('right')
         }
@@ -107,5 +111,44 @@ function scrollPhoto(direction) {
     pictureAndDescriptionFocus.replaceChild(newPhotoDescriptionFocus, photoDescriptionFocus);
     imageFocus = newimageFocus
     photoDescriptionFocus = newPhotoDescriptionFocus
+
+}
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbarH1.classList.add('navH1Scrolled');
+
+    } else {
+        navbarH1.classList.remove('navH1Scrolled');
+    }
+});
+
+
+leftArrowLastPublicationsArea.addEventListener('click', (event) => {
+    scrollPublication('left')
+});
+
+rightArrowLastPublicationsArea.addEventListener('click', (event) => {
+    scrollPublication('right')
+});
+
+function scrollPublication(direction) {
+    var indice = Array.from(lastPublications).indexOf(publicationFocus)
+    publicationFocus.style.display='none';
+    var lastPublicationsLength = lastPublications.length
+    if (direction == 'right') {
+        if (indice + 1 == lastPublicationsLength) {
+            publicationFocus = lastPublications[0]
+        } else {
+            publicationFocus = lastPublications[indice + 1]
+        }
+    } else if (direction == 'left') {
+        if (indice - 1 == -1) {
+            publicationFocus = lastPublications[lastPublicationsLength - 1]
+        } else {
+            publicationFocus = lastPublications[indice - 1]
+        }
+    }
+    publicationFocus.style.display='block';
 
 }

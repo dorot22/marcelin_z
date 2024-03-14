@@ -5,6 +5,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #717171;
 }
 
 body {
@@ -19,13 +20,18 @@ nav {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 5px solid #6f6f6f;
+    border-bottom: 5px solid #9c86ac;
     background-color: black;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
 
+}
+
+.navH1Scrolled{
+    font-size: 20px;
+    transition: font-size 2s ;
 }
 
 nav a {
@@ -41,6 +47,7 @@ nav h1 {
     color: #717171;
     font-family: 'Anta', sans-serif;
     font-size: 40px;
+    transition: font-size 2s ;
 }
 
 nav .onglets a {
@@ -140,20 +147,27 @@ header button {
 
 footer {
     margin-top: 50px;
-    border-top: 5px solid #6f6f6f;
+    border-top: 5px solid #9c86ac;
     background-color: black;
     color: white;
-    padding: 30px 100px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Saira Condensed", sans-serif;
     width: 100%;
 }
 
+
 footer h1 {
     font-family: 'Anta', sans-serif;
-    border-bottom: 1px solid white;
-    width: 20%;
-    padding-bottom: 5px;
+    margin-top: 0;
 }
 
+footer div{
+    margin-left: 0;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
 
 footer .reseaux {
     margin-top: -10px;
@@ -202,11 +216,24 @@ footer .reseaux .reseau p {
     padding-bottom: 100px;
     display: flex;
     background-color: rgba(156, 134, 172, 0.5);
-    /* width: auto; */
-    /* left: 40%; */
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 5%;
+}
+
+.socialNetworksContact {
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    /* padding-bottom: 100px; */
+    display: flex;
+    background-color: rgba(156, 134, 172, 0.5);
+    padding: 0;
+}
+
+.socialNetworksContact a{
+    margin-right: 25px;
 }
 
 .socialNetworks a {
@@ -214,19 +241,13 @@ footer .reseaux .reseau p {
     margin-right: 20px;
     display: flex;
     justify-content: center;
+    margin-right: 50px;
 }
 
 .socialNetworksLogos {
     height: 30px;
-
-
 }
 
-
-section {
-    background: #F4F4F4;
-    padding: 50px 0;
-}
 
 .container {
     max-width: 1044px;
@@ -286,26 +307,44 @@ div.desc {
     justify-content: space-around;
 }
 
-#left-arrow,
-#right-arrow {
+#left-arrow-imageFocus ,
+#right-arrow-imageFocus {
+    color: #6f6f6f;
+    margin: auto 1%;
+}
+
+#left-arrow-lastPublicationsArea,
+#right-arrow-lastPublicationsArea {
     color: #6f6f6f;
     margin: auto 1%;
 }
 
 #mainContent{
+    display: block;
     margin-top: 10%;
     min-height: 70%;
+    background-color:#717171;
 }
+
 
 #astrophotosSection h1,
 #socialNetworksSection h1 {
     color: #717171;
     font-family: 'Anta', sans-serif;
     font-size: 30px;
+    margin-left: 2%;
 }
 
-#astrophotosSection{
-    margin-bottom: 3%;
+.section{
+    display: ruby-text;
+    height: 100%;
+    border: solid 1pt;
+    padding: 2%;
+    margin: auto 2% 2%;
+    /* border-radius: 10px; */
+    background-color: #F4F4F4;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(5px 5px 10px rgb(0, 0, 0, 0.5)black);
 }
 
 #lastPublications {
@@ -326,8 +365,27 @@ div.desc {
 
 #lastPublicationsArea{
     display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
+.socialNetworkPublication{
+    display: none;
+}
+
+#allRight {
+    padding: 3;
+    background-color: #9c86ac;
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#allRight p{
+    margin: auto;
+}
 
 @media screen and (max-width:680px) {
 
